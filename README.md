@@ -1,6 +1,6 @@
 # Axie Activity API
 
-Just 2 endpoints: 
+This is POC to [task.pdf](task.pdf). Just 2 endpoints: 
 
 - GET /refresh -> endpoint will store last items sold, I believe it gets around 200 last events
 - GET /activity/{ronin_address} endpoint will get item sales from DB
