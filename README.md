@@ -39,3 +39,5 @@ Run the app
 
 ***Swagger available at http://127.0.0.1:8000/docs#/***
 ![Example request](swagger.png "example request")
+
+![The example of calling events endpoint](events.png "events served from API")
