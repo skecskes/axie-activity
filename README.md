@@ -1,5 +1,13 @@
 # Axie Activity API
 
+## Dependencies
+
+This API is now dependent on the ingestor and postgres DB docker instances. 
+While ingestor ingests events from Ronin node and push the data to postgres DB,
+this API will try to connect to DB and serve events from DB.
+
+## Description
+
 This is POC to [task.pdf](task.pdf). Just 2 endpoints: 
 
 - GET /refresh -> endpoint will store last items sold, I believe it gets around 200 last events

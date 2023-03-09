@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
 from tinydb import TinyDB
 
+from src.database import DbClient
 from src.services.graphql import GraphQLService
 
 description = """
@@ -44,3 +45,10 @@ async def get_activity(ronin_address: str):
     gql_service = GraphQLService(db)
     activities = gql_service.get_activity_of_user(ronin_address)
     return activities
+
+
+@app.get("/events/{ronin_address}")
+async def get_events(ronin_address: str):
+    db = DbClient()
+    transfers = db.get_transfers(ronin_address)
+    return transfers

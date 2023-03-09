@@ -2,3 +2,5 @@ fastapi
 uvicorn[standard]
 requests
 tinydb
+sqlalchemy==1.4.45
+psycopg2==2.9.5
