@@ -11,7 +11,8 @@ this API will try to connect to DB and serve events from DB.
 This is POC to [task.pdf](task.pdf). Just 2 endpoints: 
 
 - GET /refresh -> endpoint will store last items sold, I believe it gets around 200 last events
-- GET /activity/{ronin_address} endpoint will get item sales from DB
+- GET /activity/{ronin_address} endpoint will get item sales from DB (through GraphQL)
+- GET /events/{ronin_address} endpoint will get transfer events (through `ingestor` from ronin EVM node) from DB
 
 ## Local run
 
@@ -40,4 +41,6 @@ Run the app
 ***Swagger available at http://127.0.0.1:8000/docs#/***
 ![Example request](swagger.png "example request")
 
-![The example of calling events endpoint](events.png "events served from API")
+![Activity from GraphQL](GETactivity.png "activity from API")
+
+![Events from EVM node](GETevents.png "events from EVM node")
